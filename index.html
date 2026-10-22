@@ -306,7 +306,7 @@ body{background:radial-gradient(ellipse at 50% 0%,#42235f 0%,#17132f 48%,#090d1b
   </div>
   <div class="reel-controls">
     <button class="reel-control" id="reelPrev" type="button" aria-label="Pichhla scene">←</button>
-    <button class="reel-control" id="reelVoice" type="button" aria-pressed="true">🔊 Awaaz: On</button>
+    <button class="reel-control" id="reelVoice" type="button" aria-pressed="false">🔇 Awaaz: Off</button>
     <button class="reel-control" id="reelToggle" type="button" aria-pressed="false">⏸ Rokiye</button>
     <button class="reel-control" id="reelNext" type="button" aria-label="Agla scene">→</button>
     <button class="reel-control" id="reelClose" type="button">Band Kariye ✕</button>
@@ -511,7 +511,7 @@ const reelStories=[
   {title:'गुलाबों के बीच',lines:['फूल तो बहुत खिले...','पर नज़र आप पर ही रुकी।','आप ही सबसे ख़ास हैं 🌹'],voice:['फूल तो बहुत खिले...','पर नज़र आप पर ही रुकी।','आप ही सबसे ख़ास हैं।']},
   {title:'शहर की रोशनी में',lines:['दुनिया अपनी रफ़्तार में...','और वक़्त जैसे थम गया।','जब आप साथ चले ❤️'],voice:['दुनिया अपनी रफ़्तार में...','और वक़्त जैसे थम गया।','जब आप साथ चले।']}
 ];
-let reelScene=0,reelLine=-1,reelTimer,reelSpeechToken=0,voiceEnabled=true;
+let reelScene=0,reelLine=-1,reelTimer,reelSpeechToken=0,voiceEnabled=false;
 const reelVoice=$('reelVoice');
 const speech=window.speechSynthesis;
 if(!speech){voiceEnabled=false;reelVoice.disabled=true;reelVoice.textContent='🔇 Awaaz nahi mil rahi';reelVoice.setAttribute('aria-pressed','false')}
